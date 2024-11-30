@@ -4,7 +4,7 @@ return {
         local oil = require("oil")
         oil.setup({
             float = {
-                max_width = 100,
+                max_width = 130,
                 max_height = 40,
             },
         })
