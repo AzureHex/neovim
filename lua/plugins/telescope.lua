@@ -5,7 +5,7 @@ return {
     {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-        vim.keymap.set("n", "-", ":Telescope file_browser path=~/ select_buffer=true hidden=true<CR>")
+        vim.keymap.set("n", "-", ":Telescope file_browser path=%:p:h select_buffer=true<CR>"),
     },
     {
         "nvim-telescope/telescope.nvim",
