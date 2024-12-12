@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.opt.scrolloff = 10
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
-vim.opt.guicursor = "n-v-c:ver25-blinkon1,i-ci-ve:ver25-blinkon1"
+vim.opt.guicursor = "n-v-c-i-ci-ve:ver25-blinkon1"
 --vim.opt.number = true
 --vim.opt.fillchars:append("eob: ")
 
