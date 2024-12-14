@@ -6,10 +6,13 @@ vim.g.mapleader = " "
 
 vim.opt.swapfile = false
 
+vim.api.nvim_set_keymap('n', 'j', 'k', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'k', 'j', { noremap = true, silent = true })
+
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<c-j>', ':wincmd k<CR>')
+vim.keymap.set('n', '<c-k>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.wo.number = true
