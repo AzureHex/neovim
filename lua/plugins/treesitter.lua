@@ -13,6 +13,12 @@ return {
 		end
 	},
   {
+    'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    }
+  },
+  {
     'MeanderingProgrammer/markdown.nvim',
     main = "render-markdown",
     opts = {},
@@ -20,3 +26,4 @@ return {
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
   },
 }
+
