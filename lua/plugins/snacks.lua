@@ -33,7 +33,7 @@ return {
     --    { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse" },
     --    { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
     --    { "<leader>gf", function() Snacks.lazygit.log_file() end,        desc = "Lazygit Current File History" },
-    { "<leader>l",  function() Snacks.lazygit() end,                 desc = "Lazygit" },
+    { "<leader>lg",  function() Snacks.lazygit() end,                 desc = "Lazygit" },
     { "<leader>gl", function() Snacks.lazygit.log() end,             desc = "Lazygit Log (cwd)" },
     { "<leader>n", function() Snacks.notifier.hide() end,           desc = "Dismiss All Notifications" },
     --    { "<c-/>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
