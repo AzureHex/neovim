@@ -48,6 +48,11 @@ return {
         end
     },
 
+    -- copilot.vim
+    {
+        "github/copilot.vim"
+    },
+
     -- gen.nvim
     {
         "David-Kunz/gen.nvim",
