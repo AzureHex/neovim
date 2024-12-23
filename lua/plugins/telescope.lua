@@ -51,7 +51,6 @@ return {
                 move_left = '<C-A-Left>',
                 move_right = '<C-A-Right>',
             },
-
         -- Conditional shell setup
         shell = (function()
             if vim.fn.has("win32") == 1 then
