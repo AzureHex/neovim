@@ -39,8 +39,8 @@ return {
         branch = "stable",
         event = "VeryLazy",
         opts = {
-            float_width = 0.7,
-            float_height = 0.7,
+            float_width = 0.9,
+            float_height = 0.9,
             keymaps = {
                 toggle = '<A-t>',
                 new_vertical = '<A-\\>',
@@ -51,16 +51,22 @@ return {
                 move_left = '<C-A-Left>',
                 move_right = '<C-A-Right>',
             },
+
         -- Conditional shell setup
         shell = (function()
             if vim.fn.has("win32") == 1 then
-                return "pwsh"  -- Use PowerShell 7 on Windows
-            elseif vim.fn.has("unix") == 1 or vim.fn.has("mac") == 1 then
-                return "/opt/homebrew/bin/fish"  -- Default shell for macOS/Linux (change to your preferred shell)
+                return "pwsh"
+            elseif vim.fn.has("unix") == 1 then
+                if vim.fn.has("mac") == 1 then
+                    return "/opt/homebrew/bin/fish"
+                else
+                    return "/home/linuxbrew/.linuxbrew/bin/fish"
+                end
             else
-                return vim.o.shell  -- Fallback to the default shell
+                return vim.o.shell
             end
         end)(),
+
         },
         dependencies = {
             "nvim-lua/plenary.nvim",
