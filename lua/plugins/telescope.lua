@@ -51,6 +51,16 @@ return {
                 move_left = '<C-A-Left>',
                 move_right = '<C-A-Right>',
             },
+        -- Conditional shell setup
+        shell = (function()
+            if vim.fn.has("win32") == 1 then
+                return "pwsh"  -- Use PowerShell 7 on Windows
+            elseif vim.fn.has("unix") == 1 or vim.fn.has("mac") == 1 then
+                return "/bin/bash"  -- Default shell for macOS/Linux (change to your preferred shell)
+            else
+                return vim.o.shell  -- Fallback to the default shell
+            end
+        end)(),
         },
         dependencies = {
             "nvim-lua/plenary.nvim",
