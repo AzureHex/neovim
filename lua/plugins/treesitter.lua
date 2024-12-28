@@ -6,7 +6,7 @@ return {
 			local config = require("nvim-treesitter.configs")
 			config.setup({
 				auto_install = true,
-        ensure_installed = { "lua", "bash", "markdown" },
+        ensure_installed = { "bash", "json", "lua", "markdown", "powershell", "yaml" },
 				highlight = { enable = true },
 				indent = { enable = true },
 			})
