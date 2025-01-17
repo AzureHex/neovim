@@ -59,13 +59,16 @@ return {
                 if vim.fn.has("mac") == 1 then
                     return "/opt/homebrew/bin/fish"
                 else
-                    return "/home/linuxbrew/.linuxbrew/bin/fish"
+                    if vim.fn.executable("/sbin/fish") == 1 then
+                        return "/sbin/fish"
+                    else
+                        return "/home/linuxbrew/.linuxbrew/bin/fish"
+                    end
                 end
             else
                 return vim.o.shell
             end
         end)(),
-
         },
         dependencies = {
             "nvim-lua/plenary.nvim",
