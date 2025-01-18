@@ -1,8 +1,8 @@
 return {
     -- copilot.vim
-    {
-        "github/copilot.vim"
-    },
+    -- {
+    --     "github/copilot.vim"
+    -- },
 
     -- gen.nvim
     {
