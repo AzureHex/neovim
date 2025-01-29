@@ -1,14 +1,14 @@
 return {
     -- copilot.vim
-    -- {
-    --     "github/copilot.vim"
-    -- },
+    {
+        "github/copilot.vim"
+    },
 
     -- gen.nvim
     {
         "David-Kunz/gen.nvim",
         opts = {
-            model = "qwen2.5-coder",
+            model = "deepseek-coder:6.7b", -- deepseek-coder:6.7b, qwen2.5-coder
             quit_map = "q",
             retry_map = "<c-r>", -- set keymap to re-send the current prompt
             accept_map = "<c-cr>", -- set keymap to replace the previous selection with the last result
