@@ -8,7 +8,7 @@ return {
     {
         "David-Kunz/gen.nvim",
         opts = {
-            model = "deepseek-coder:6.7b", -- deepseek-coder:6.7b, qwen2.5-coder
+            model = "deepseek-r1:8b", -- deepseek-r1:8b, qwen2.5-coder
             quit_map = "q",
             retry_map = "<c-r>", -- set keymap to re-send the current prompt
             accept_map = "<c-cr>", -- set keymap to replace the previous selection with the last result
