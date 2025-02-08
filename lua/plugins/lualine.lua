@@ -18,6 +18,7 @@ return {
                     {
                         'branch',
                         icon = '',
+                        color = { fg = '#98c379' },
                     },
                     {
                         'diff',
