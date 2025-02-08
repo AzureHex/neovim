@@ -2,6 +2,7 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = {
         "nvim-tree/nvim-web-devicons",
+        "Isrothy/lualine-diagnostic-message",
     },
 
     config = function()
@@ -15,8 +16,21 @@ return {
             sections = {
                 lualine_b = {
                     {
-                        'branch',  -- Keep the branch component
-                        icon = '',  -- Custom Git icon (change this to any icon you prefer)
+                        'branch',
+                        icon = '',
+                    },
+                },
+                lualine_c = {
+                    {
+                        'diagnostics',
+                        sources = { 'nvim_lsp' },
+                        symbols = {
+                            error = '',
+                            warn = '',
+                            info = '',
+                            hint = '',
+                        },
+                        colored = true,
                     },
                 },
             },
