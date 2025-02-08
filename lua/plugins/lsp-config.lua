@@ -43,26 +43,20 @@ return {
             })
 
             vim.diagnostic.config({
-                virtual_text = {
-                    prefix = '●',
-                },
+                virtual_text = false,
                 signs = true,
                 update_in_insert = true,
                 underline = true,
                 severity_sort = true,
+                signs = {
+                    text = {
+                        [vim.diagnostic.severity.ERROR] = " ",
+                        [vim.diagnostic.severity.WARN] = " ",
+                        [vim.diagnostic.severity.INFO] = " ",
+                        [vim.diagnostic.severity.HINT] = "",
+                    },
+                },
             })
-
-            local signs = {
-                Error = " ",
-                Warn = " ",
-                Info = " ",
-                Hint = " ",
-            }
-
-            for type, icon in pairs(signs) do
-                local hl = "DiagnosticSign" .. type
-                vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-            end
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

@@ -19,8 +19,15 @@ return {
                         'branch',
                         icon = '',
                     },
-                },
-                lualine_c = {
+                    {
+                        'diff',
+                        colored = true,
+                        symbols = {
+                            added = ' ',
+                            modified = ' ',
+                            removed = ' ',
+                        },
+                    },
                     {
                         'diagnostics',
                         sources = { 'nvim_lsp' },
@@ -28,7 +35,7 @@ return {
                             error = ' ',
                             warn = ' ',
                             info = ' ',
-                            hint = ' ',
+                            hint = '',
                         },
                         colored = true,
                     },

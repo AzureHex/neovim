@@ -7,7 +7,7 @@ return {
 			config.setup({
 				auto_install = true,
         ensure_installed = { "bash", "json", "lua", "markdown", "powershell", "yaml" },
-				highlight = { enable = true },
+				highlight = { enable = false },
 				indent = { enable = true },
 			})
 		end
@@ -15,7 +15,6 @@ return {
   {
     'numToStr/Comment.nvim',
     opts = {
-        -- add any options here
     }
   },
   {
@@ -26,4 +25,3 @@ return {
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
   },
 }
-
