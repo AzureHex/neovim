@@ -1,14 +1,31 @@
 return {
   "folke/snacks.nvim",
+  dependencies = {
+    "echasnovski/mini.icons",
+  },
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
-    dashboard = { enabled = true },
+    dashboard = {
+      enabled = true,
+      preset = {
+        header = [[
+                                                                     
+       ████ ██████           █████      ██                     
+      ███████████             █████                             
+      █████████ ███████████████████ ███   ███████████   
+     █████████  ███    █████████████ █████ ██████████████   
+    █████████ ██████████ █████████ █████ █████ ████ █████   
+  ███████████ ███    ███ █████████ █████ █████ ████ █████  
+ ██████  █████████████████████ ████ █████ █████ ████ ██████ 
+        ]],
+      },
+    },
     explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
+    git = { enabled = true },
     notifier = {
       enabled = true,
       timeout = 3000,
@@ -30,6 +47,7 @@ return {
       }
     }
   },
+
   keys = {
     -- Top Pickers & Explorer
     { "<leader>fz", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
