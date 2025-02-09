@@ -1,7 +1,7 @@
 return {
   "folke/snacks.nvim",
   dependencies = {
-    "echasnovski/mini.icons",
+    'echasnovski/mini.nvim',
   },
   priority = 1000,
   lazy = false,
@@ -43,7 +43,7 @@ return {
     words = { enabled = true },
     styles = {
       notification = {
-        -- wo = { wrap = true } -- Wrap notifications
+        wo = { wrap = true } -- Wrap notifications
       }
     }
   },
