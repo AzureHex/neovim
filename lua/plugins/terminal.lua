@@ -22,12 +22,12 @@ return {
                 return "pwsh"
             elseif vim.fn.has("unix") == 1 then
                 if vim.fn.has("mac") == 1 then
-                    return "/opt/homebrew/bin/fish"
+                    return "/opt/homebrew/bin/zsh"
                 else
-                    if vim.fn.executable("/sbin/fish") == 1 then
-                        return "/sbin/fish"
+                    if vim.fn.executable("/sbin/zsh") == 1 then
+                        return "/sbin/zsh"
                     else
-                        return "/home/linuxbrew/.linuxbrew/bin/fish"
+                        return "/home/linuxbrew/.linuxbrew/bin/zsh"
                     end
                 end
             else
